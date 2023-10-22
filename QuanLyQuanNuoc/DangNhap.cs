@@ -74,5 +74,16 @@ namespace QuanLyQuanNuoc
             taikhoan.ShowDialog();
             this.Show();
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox1.CheckState ==  CheckState.Checked) {
+                txb_matkhau.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txb_matkhau.UseSystemPasswordChar = true;
+            }
+        }
     }
 }

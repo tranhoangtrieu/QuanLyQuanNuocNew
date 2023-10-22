@@ -268,11 +268,7 @@ namespace QuanLyQuanNuoc
             }
         }
 
-        private void xToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            fMenu fMenu = new fMenu();
-            fMenu.Show();
-        }
+        
 
         
 

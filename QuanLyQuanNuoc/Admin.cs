@@ -731,5 +731,19 @@ namespace QuanLyQuanNuoc
 
             }
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.CheckState == CheckState.Checked)
+            {
+                txt_Newpassword.UseSystemPasswordChar = false;
+                txt_checkNewPass.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txt_Newpassword.UseSystemPasswordChar = true;
+                txt_checkNewPass.UseSystemPasswordChar = true;
+            }
+        }
     }
 }
