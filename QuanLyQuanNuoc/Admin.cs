@@ -48,7 +48,7 @@ namespace QuanLyQuanNuoc
             panel_ThemBan.Hide();
         }
 
-       
+
 
         public void loadAccount()
         {
@@ -78,7 +78,7 @@ namespace QuanLyQuanNuoc
 
         void AddFoodBinding()
         {
-            txt_idFood.DataBindings.Add(new Binding("Text", datagrv_thucan.DataSource, "id", true, DataSourceUpdateMode.Never));
+             txt_idFood.DataBindings.Add(new Binding("Text", datagrv_thucan.DataSource, "id", true, DataSourceUpdateMode.Never));
             txt_nameFood.DataBindings.Add(new Binding("Text", datagrv_thucan.DataSource, "Name", true, DataSourceUpdateMode.Never));
             txt_price.DataBindings.Add(new Binding("Text", datagrv_thucan.DataSource, "price", true, DataSourceUpdateMode.Never));
         }
@@ -114,7 +114,7 @@ namespace QuanLyQuanNuoc
             txt_displayname.DataBindings.Add(new Binding("Text", datagrv_Account.DataSource, "DisplayName", true, DataSourceUpdateMode.Never));
             txt_username.DataBindings.Add(new Binding("Text", datagrv_Account.DataSource, "UserName", true, DataSourceUpdateMode.Never));
             nb_typeAccount.DataBindings.Add(new Binding("Value", datagrv_Account.DataSource, "Type", true, DataSourceUpdateMode.Never));
-            
+
         }
 
         void TableBinding()
@@ -140,6 +140,9 @@ namespace QuanLyQuanNuoc
             datagrv_doanhthu.DataSource = BillDAO.Instance.GetBillListDate(chekIn, chekOut);
 
         }
+
+
+
 
 
         private void txt_idFood_TextChanged(object sender, EventArgs e)
@@ -181,26 +184,6 @@ namespace QuanLyQuanNuoc
         }
 
 
-        //private void btn_CTHD_Click(object sender, EventArgs e)
-        //{
-
-
-
-        //    int rowIndex = datagrv_danhmuc.CurrentRow.Index;
-        //    if (rowIndex >= 0)
-        //    {
-        //        DataGridViewRow select = datagrv_doanhthu.Rows[rowIndex];
-        //        int id = (int)select.Cells["id"].Value;
-        //        ChiTietHoaDon f = new ChiTietHoaDon(id);
-        //        f.Show();
-        //    }
-
-        //}
-        //  ChiTietHoaDon f = new ChiTietHoaDon();
-        //  f.Show();
-        // xem chi tiết bill
-
-
         private void btn_CTHD_Click(object sender, EventArgs e)
         {
             if (datagrv_doanhthu.CurrentRow != null)
@@ -225,6 +208,7 @@ namespace QuanLyQuanNuoc
 
         private void btn_TimKiem_Click(object sender, EventArgs e)
         {
+
             string Search = textBox_search.Text;
             string query = "SELECT * FROM Food WHERE dbo.non_unicode_convert(name) LIKE  N'%" + Search + "%'";
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
@@ -234,13 +218,7 @@ namespace QuanLyQuanNuoc
         }
 
 
-        private void button6_Click(object sender, EventArgs e)// chức năng tìm kiếm món ăm trong Food
-        {
-            
-            
-        }
-
-
+        // chức năng tìm kiếm món ăm trong Food
 
 
         private void btn_XoaMonAn_Click(object sender, EventArgs e)
@@ -331,7 +309,7 @@ namespace QuanLyQuanNuoc
             int id = Convert.ToInt32(txt_idFood.Text);
             string name = txt_nameFood.Text;
             int idCategory = (cbb_thuchan.SelectedItem as Category).Id;
-          //  float price = (float.Parse(txt_price.Text));
+            //  float price = (float.Parse(txt_price.Text));
 
 
             float price;
@@ -357,9 +335,9 @@ namespace QuanLyQuanNuoc
         //sửa món ăn
         //-------------------------
 
-       
 
-        
+
+
 
 
         private void btn_ThemMonAn_Click(object sender, EventArgs e)
@@ -381,15 +359,15 @@ namespace QuanLyQuanNuoc
 
         private void btn_ThemAccount_Click(object sender, EventArgs e)
         {
-        
+
             AddAccount account = new AddAccount();
-            
+
             account.Show();
-          
+
         }// show Form AddAccount
 
 
-       // thêm tài khoản
+        // thêm tài khoản
 
 
 
@@ -427,9 +405,9 @@ namespace QuanLyQuanNuoc
 
         // xóa tài khoản
 
-        
+
         // sửa thông tin tài khoản
-        
+
 
 
         private void btn_DatLaiMK_Click(object sender, EventArgs e)
@@ -453,7 +431,7 @@ namespace QuanLyQuanNuoc
         {
             string UserName = txt_username.Text;
             string NewPassWord = txt_Newpassword.Text;
-            string CheckNewPass =   txt_checkNewPass.Text;
+            string CheckNewPass = txt_checkNewPass.Text;
             if (NewPassWord != "")
             {
                 if (NewPassWord == CheckNewPass)
@@ -483,7 +461,7 @@ namespace QuanLyQuanNuoc
 
 
 
-           
+
 
         }// Đổi mật khẩu
 
@@ -553,7 +531,7 @@ namespace QuanLyQuanNuoc
         }
 
         // xóa bàn thành công
-        
+
 
         private void datagrv_banan_KeyUp(object sender, KeyEventArgs e)
         {
@@ -631,7 +609,7 @@ namespace QuanLyQuanNuoc
             }
         }// sửa loại đồ ăn
 
-       
+
         private void btn_ThemLoaiDoAn_Click(object sender, EventArgs e)
         {
             if (isButtonOn)
@@ -661,7 +639,7 @@ namespace QuanLyQuanNuoc
                 panel_ThemDoAn.Hide();
                 isButtonOn = true;
                 btn_SuaLoaiDoAn.Enabled = true;
-       
+
             }
             else
             {
@@ -732,7 +710,7 @@ namespace QuanLyQuanNuoc
 
         private void datagrv_doanhthu_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.RowIndex >= 0)
+            if (e.RowIndex >= 0)
             {
                 DataGridViewRow select = datagrv_doanhthu.Rows[e.RowIndex];
                 int id = (int)select.Cells["id"].Value;
@@ -741,6 +719,17 @@ namespace QuanLyQuanNuoc
             }
         }
 
-        
+        private void datagrv_thucan_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+            if (rowIndex >= 0)
+            {
+                txt_idFood.Text = datagrv_thucan.Rows[rowIndex].Cells["ColId"].Value.ToString();
+                txt_price.Text = datagrv_thucan.Rows[rowIndex].Cells["colprice"].Value.ToString();
+                txt_nameFood.Text = datagrv_thucan.Rows[rowIndex].Cells["colName"].Value.ToString();
+
+
+            }
+        }
     }
 }

@@ -530,6 +530,7 @@
             this.datagrv_thucan.RowTemplate.Height = 24;
             this.datagrv_thucan.Size = new System.Drawing.Size(932, 252);
             this.datagrv_thucan.TabIndex = 0;
+            this.datagrv_thucan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagrv_thucan_CellClick);
             this.datagrv_thucan.KeyUp += new System.Windows.Forms.KeyEventHandler(this.datagrv_thucan_KeyUp);
             // 
             // ColId

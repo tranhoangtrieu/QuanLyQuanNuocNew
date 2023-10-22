@@ -12,7 +12,7 @@ namespace QuanLyQuanNuoc.DAO
     {
         private static DataProvider instance;
 
-        private string connetionSTR = "Data Source=MSI\\SQLEXPRESS;Initial Catalog=QuanLyQuanNuoc;Integrated Security=True";
+        private string connetionSTR = "Data Source=MSI;Initial Catalog=QuanLyQuanNuoc;Integrated Security=True";
 
 
         public static DataProvider Instance
