@@ -75,15 +75,23 @@ namespace QuanLyQuanNuoc
             this.Show();
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+       
+        private bool isButtonOn = true;
+        private void button2_Click(object sender, EventArgs e)
         {
-            if(checkBox1.CheckState ==  CheckState.Checked) {
+            if (isButtonOn)
+            {
+                button2.Image = Properties.Resources.icons8_eyes_32__1_;
+
                 txb_matkhau.UseSystemPasswordChar = false;
             }
             else
             {
+
+                button2.Image = Properties.Resources.icons8_eyes_32;
                 txb_matkhau.UseSystemPasswordChar = true;
             }
+            isButtonOn = !isButtonOn;
         }
     }
 }

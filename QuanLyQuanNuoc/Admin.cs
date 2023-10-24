@@ -745,5 +745,26 @@ namespace QuanLyQuanNuoc
                 txt_checkNewPass.UseSystemPasswordChar = true;
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+             
+            if (isButtonOn== false)
+            {
+                button2.Image = Properties.Resources.icons8_eyes_32__1_;
+
+                txt_Newpassword.UseSystemPasswordChar = false;
+                txt_checkNewPass.UseSystemPasswordChar = false;
+            }
+            else
+            {
+
+                button2.Image = Properties.Resources.icons8_eyes_32;
+                txt_Newpassword.UseSystemPasswordChar = true;
+                txt_checkNewPass.UseSystemPasswordChar = true;
+            }
+            isButtonOn = !isButtonOn;
+        }
     }
 }

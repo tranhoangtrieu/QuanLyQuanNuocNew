@@ -122,6 +122,7 @@
             this.btn_ThemBan = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.panel_MatKhau = new System.Windows.Forms.Panel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.txt_checkNewPass = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.btn_DongYMK = new System.Windows.Forms.Button();
@@ -148,7 +149,7 @@
             this.btn_SuaAccount = new System.Windows.Forms.Button();
             this.btn_XoaAccont = new System.Windows.Forms.Button();
             this.btn_ThemAccount = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -1186,6 +1187,7 @@
             // 
             // panel_MatKhau
             // 
+            this.panel_MatKhau.Controls.Add(this.button2);
             this.panel_MatKhau.Controls.Add(this.checkBox1);
             this.panel_MatKhau.Controls.Add(this.txt_checkNewPass);
             this.panel_MatKhau.Controls.Add(this.label28);
@@ -1197,6 +1199,17 @@
             this.panel_MatKhau.Name = "panel_MatKhau";
             this.panel_MatKhau.Size = new System.Drawing.Size(373, 106);
             this.panel_MatKhau.TabIndex = 10;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(238, 30);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(55, 19);
+            this.checkBox1.TabIndex = 14;
+            this.checkBox1.Text = "Hiện";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // txt_checkNewPass
             // 
@@ -1477,16 +1490,15 @@
             this.btn_ThemAccount.UseVisualStyleBackColor = true;
             this.btn_ThemAccount.Click += new System.EventHandler(this.btn_ThemAccount_Click);
             // 
-            // checkBox1
+            // button2
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(238, 30);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(55, 19);
-            this.checkBox1.TabIndex = 14;
-            this.checkBox1.Text = "Hiện";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.button2.Image = global::QuanLyQuanNuoc.Properties.Resources.icons8_eyes_32;
+            this.button2.Location = new System.Drawing.Point(238, 55);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(61, 29);
+            this.button2.TabIndex = 25;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Admin
             // 
@@ -1672,5 +1684,6 @@
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -36,7 +36,7 @@
             this.btn_dangnhap = new System.Windows.Forms.Button();
             this.btn_thoat = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txb_taikhoan
@@ -115,16 +115,15 @@
             this.label3.Text = "Quên mật khẩu ?";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // checkBox1
+            // button2
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(297, 87);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(55, 19);
-            this.checkBox1.TabIndex = 7;
-            this.checkBox1.Text = "Hiện";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.button2.Image = global::QuanLyQuanNuoc.Properties.Resources.icons8_eyes_32;
+            this.button2.Location = new System.Drawing.Point(295, 81);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(61, 29);
+            this.button2.TabIndex = 24;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // DangNhap
             // 
@@ -133,7 +132,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btn_thoat;
             this.ClientSize = new System.Drawing.Size(413, 231);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_thoat);
             this.Controls.Add(this.btn_dangnhap);
@@ -161,7 +160,7 @@
         private System.Windows.Forms.Button btn_dangnhap;
         private System.Windows.Forms.Button btn_thoat;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button button2;
     }
 }
 
