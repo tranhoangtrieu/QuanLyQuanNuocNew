@@ -35,20 +35,23 @@
             // datagrv_chitiethoadon
             // 
             this.datagrv_chitiethoadon.AllowUserToAddRows = false;
+            this.datagrv_chitiethoadon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.datagrv_chitiethoadon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datagrv_chitiethoadon.Location = new System.Drawing.Point(40, 103);
+            this.datagrv_chitiethoadon.Location = new System.Drawing.Point(30, 84);
+            this.datagrv_chitiethoadon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.datagrv_chitiethoadon.Name = "datagrv_chitiethoadon";
             this.datagrv_chitiethoadon.RowHeadersWidth = 51;
             this.datagrv_chitiethoadon.RowTemplate.Height = 24;
-            this.datagrv_chitiethoadon.Size = new System.Drawing.Size(727, 323);
+            this.datagrv_chitiethoadon.Size = new System.Drawing.Size(545, 262);
             this.datagrv_chitiethoadon.TabIndex = 0;
             // 
             // ChiTietHoaDon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.datagrv_chitiethoadon);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ChiTietHoaDon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChiTietHoaDon";
